@@ -1,0 +1,154 @@
+---
+title: "Título"
+subtitle: "Subtítulo" 
+author: "Gustavo Sabbag^[Email: gussabbag@gmail.com; website: gustavosabbag.github.io.]"
+# geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
+date: "DCP-UFMG"
+abstract: |
+  \singlespacing Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec arcu sollicitudin, malesuada arcu sit amet, auctor urna. Ut quis massa vitae nisi iaculis commodo. Fusce consequat mauris eget tristique pellentesque. Aliquam ac nisl sit amet metus tempor pellentesque ut accumsan massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia vehicula varius. Praesent congue maximus nibh eget egestas. Suspendisse dapibus non neque sit amet vulputate. Nulla cursus sapien dui, quis blandit tellus auctor placerat. Sed malesuada faucibus nunc, id convallis erat scelerisque tempus. \par 
+  \noindent \textit{\textbf{Palavras-chave:} Ut, non, risus}
+thanks: "Trabalho preparado para tal Congresso; ou agradeço a CAPES por me bancar." 
+output:
+  pdf_document: default
+  keep_tex: true
+  html_document:
+    df_print: paged
+  word_document:
+    fig_caption: yes
+    reference_docx: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//paper_word_template.docx
+header-includes:
+   - \usepackage{indentfirst}
+   - \setlength{\parindent}{24pt}
+   - \usepackage[portuguese, brazil]{babel}
+   - \usepackage{setspace}\onehalfspacing
+   - \usepackage{multirow}
+   - \usepackage[table]{xcolor}
+   - \usepackage{caption}
+   - \usepackage{array}
+   - \usepackage{float}
+   
+fontsize: 12pt
+mainfont: timesnewroman
+csl: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//associacao-brasileira-de-normas-tecnicas-ipea.csl
+bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//referencias.bib
+
+---
+
+# Corpo do documento
+
+## Subseção
+Aqui vai um texto. Para usar notas de rodapé, faz-se assim^[E escreve-se aqui dentro a nota, em que o próprio documento gera a nota no rodapé e ordena numericamente]. Também se pode colocar *itálico* ou **negrito**. Ou em latex, \textit{itálico} e \textbf{negrito}, ou \textit{\textbf{os dois}}. 
+
+### Terceira Subseção 
+
+Para construir bibliografia, é necessário somente ter um arquivo texto com as referências em formato bibtex, o csl com formato ABNT, e citar usando esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
+
+## Templates de objetos
+
+O H depois do início do código de objeto (begin), seja tabela ou figura, força o objeto no lugar exato do texto, contanto que se use o pacote float no YML (já está aplicado).
+
+Para criar outros títulos de objeto, criar embaixo do pacote caption, como feito para quadros.
+
+### Importar figuras
+
+\begin{figure}[h]
+\begin{center}
+\captionsetup{justification=centering}
+  \caption{Incentivos de Estratégias de Mobilização Simbólica\newline e o Tipo de Vínculo Construído}
+  \label{fig:1}
+  \includegraphics[width=7cm]{/Users/gustavosabbag/Google Drive/Doutorados Sanduíche/Doutorado Capes:DAAD Alemanha/Documentos/II - Project/Fig1pt.png}
+\end{center}
+\centerline{\footnotesize Fonte: Elaboração própria.}
+\end{figure}
+
+### Estrutura de Quadros em Latex (laterais fechadas)
+
+Para usar "quadro" em outra língua, criar a caption na linha de baixo do pacote caption, como feito.
+
+
+\setlength{\tabcolsep}{14pt}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{table}[H]
+\begin{center}
+\caption{Incentivos de Estratégias Eleitorais Simbólicas e sua Operacionalização}
+\label{table:1}
+\begin{tabular}{ |l|l| } 
+\hline
+\rowcolor[HTML]{AAACED} \color{white} \textbf{Incentivos} & \color{white} \textbf{Operacionalização} \\
+\hline \hline
+\textbf{Identificação} & Apelos a características compartilhadas (como religião, região, etc) \\
+\hline
+\multirow{3}{4em}{\textbf{Personalismo}} & Controle centralizado do movimento \\ 
+                                         & Relações imediadas e passionais \\
+                                         & Representação delegativa e missionária \\
+\hline
+\multirow{2}{4em}{\textbf{Radicalismo}} & Crítica sistemática das elites e instituições estabelecidas \\ 
+                                       & Proposição de uma nova ordem \\
+\hline
+\end{tabular}
+\footnotesize Fonte: Elaboração própria.
+\end{center}
+\end{table}
+
+
+
+### Mesmo objeto, mas como tabela (laterais abertos)
+
+Deve-se alterar na linha de tabular
+
+\setlength{\tabcolsep}{14pt}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{table}[H]
+\begin{center}
+\caption{Incentivos de Estratégias Eleitorais Simbólicas e sua Operacionalização}
+\label{table:1}
+\begin{tabular}{ l|l } 
+\hline
+\rowcolor[HTML]{AAACED} \color{white} \textbf{Incentivos} & \color{white} \textbf{Operacionalização} \\
+\hline \hline
+\textbf{Identificação} & Apelos a características compartilhadas (como religião, região, etc) \\
+\hline
+\multirow{3}{4em}{\textbf{Personalismo}} & Controle centralizado do movimento \\ 
+                                         & Relações imediadas e passionais \\
+                                         & Representação delegativa e missionária \\
+\hline
+\multirow{2}{4em}{\textbf{Radicalismo}} & Crítica sistemática das elites e instituições estabelecidas \\ 
+                                       & Proposição de uma nova ordem \\
+\hline
+\end{tabular}
+\footnotesize Fonte: Elaboração própria.
+\end{center}
+\end{table}
+
+### Tabela mais complexa
+
+<!-- \setlength{\tabcolsep}{13pt}
+\renewcommand{\arraystretch}{0.75} -->
+
+\begin{table}[H]
+\begin{center}
+\caption{Sumário do Desenho de Pesquisa}
+\label{table:2}
+\begin{tabular}{ |m{6em}|m{6em}|m{6em}|m{6em}| } 
+\hline
+\rowcolor[HTML]{AAACED}\multirow{2}{5em}{} &  & \multicolumn{2}{c|}{\color{white} \textbf{Estágio 2}} \\
+\rowcolor[HTML]{AAACED} & \color{white} \multirow{-2}{5em}{\textbf{Estágio 1}} & \multicolumn{1}{c}{\color{white} \textbf{Parte 1}} & \color{white} \textbf{Parte 2} \\
+\hline \hline                                    
+\cellcolor[HTML]{E0E0E0}\textbf{\textit{Escopo de Inferência}} & Validade Externa & Validade Interna & Validade Interna \\
+\hline
+\cellcolor[HTML]{E0E0E0}\textbf{\textit{Casos}} & Democracias liberais & 2º turno das eleições presidenciais brasileiras (2014-2018) & 2º turno das eleições presidenciais brasileiras (2014-2018) \\
+\hline
+\cellcolor[HTML]{E0E0E0}\textbf{\textit{Métodos}} & Painel & Painel; Classificação Manual & Process Tracing; Classificação Manual \\
+\hline
+\cellcolor[HTML]{E0E0E0}\textbf{\textit{Fonte de Dados}} & DALP; WVS & Pesquisas de Opinião e Twitter & Notícias, Entrevistas, Fontes Secundárias, Pesquisas de Opinião, HGPE \\
+\hline
+\end{tabular}
+\end{center}
+\centerline{\footnotesize Fonte: Elaboração própria.}
+\end{table}
+
+# Bibliografia sem parágrafo
+
+\setlength{\parindent}{0pt} 

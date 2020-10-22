@@ -1,0 +1,4 @@
+name: Template para artigos
+description: >
+   Documento padrão para artigos e projetos em rmarkdown com diversas ferramentas já.
+create_dir: FALSE
