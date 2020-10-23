@@ -1,13 +1,13 @@
 ---
 title: "Título"
 subtitle: "Subtítulo" 
-author: "Gustavo Sabbag^[Email: gussabbag@gmail.com; website: gustavosabbag.github.io.]"
+author: "Gustavo Sabbag^[Email: gussabbag@gmail.com; Website: gustavosabbag.github.io.]"
 # geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
 date: "DCP-UFMG"
+thanks: "Trabalho preparado para tal Congresso; ou agradeço a CAPES por me bancar." 
 abstract: |
   \singlespacing Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec arcu sollicitudin, malesuada arcu sit amet, auctor urna. Ut quis massa vitae nisi iaculis commodo. Fusce consequat mauris eget tristique pellentesque. Aliquam ac nisl sit amet metus tempor pellentesque ut accumsan massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia vehicula varius. Praesent congue maximus nibh eget egestas. Suspendisse dapibus non neque sit amet vulputate. Nulla cursus sapien dui, quis blandit tellus auctor placerat. Sed malesuada faucibus nunc, id convallis erat scelerisque tempus. \par 
   \noindent \textit{\textbf{Palavras-chave:} Ut, non, risus}
-thanks: "Trabalho preparado para tal Congresso; ou agradeço a CAPES por me bancar." 
 output:
   pdf_document: default
   keep_tex: true
@@ -38,21 +38,21 @@ bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para
 
 ## Modifique os parâmetros com seus dados
 
-Este é um documento modelo. Preencha seu nome, nome do trabalho, e inclua o texto. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar o seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
+Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá produzir. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar o seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
 
 - csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
 - Reference_docs (no output de word_document): paper_word_template.docx
 - bibliography: referencias.bib
 
-Para construir sua bibliografia, insira os textos que você irá citar no trabalho no arquivo referencias.bib. Este arquivo será incluído automaticamente na pasta do seu documento do rmarkdown, em formato bibtex (você pode encontrar suas referências neste formato diretamente no google scholar. É só copiar e colar neste arquivo). 
+Para construir sua bibliografia, insira os textos que você irá citar no trabalho no arquivo referencias.bib. Assim, quando você gerar o arquivo, a bibliografia será automaticamente criada no final do documento, no formato ABNT. Este arquivo será incluído automaticamente na pasta do seu documento do rmarkdown, em formato bibtex (você pode encontrar suas referências neste formato diretamente no Google Scholar. É só copiar e colar neste arquivo usando qualquer editor de texto - recomendo BibDesk). 
 
-Para citar no seu documento use esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
+Para citar as referências no corpo de seu documento, use esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
 
-## Alguns dicas e códigos  úteis
+## Algumas dicas e códigos  úteis
 
-### Códigos úteis de Latex
+### Estrutura básica
 
-Aqui vai um texto. Para usar notas de rodapé, faz-se assim^[E escreve-se aqui dentro a nota, em que o próprio documento gera a nota no rodapé e ordena numericamente]. Também se pode colocar *itálico* ou **negrito**. Ou em latex, \textit{itálico} e \textbf{negrito}, ou \textit{\textbf{os dois}}. 
+Aqui vai um texto. Para usar notas de rodapé, faz-se assim^[E escreve-se-a aqui dentro, de onde o próprio documento a gera e ordena-a numericamente]. Também se pode colocar *itálico* ou **negrito**. Ou em latex, \textit{itálico} e \textbf{negrito}, ou \textit{\textbf{os dois}}. 
 
 ### Templates de objetos
 
@@ -60,7 +60,7 @@ O H depois do início do código de objeto (begin), seja tabela ou figura, forç
 
 ### Importar figuras
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \captionsetup{justification=centering}
   \caption{Incentivos de Estratégias de Mobilização Simbólica\newline e o Tipo de Vínculo Construído}
@@ -156,6 +156,8 @@ Deve-se alterar na linha de tabular
 \centerline{\footnotesize Fonte: Elaboração própria.}
 \end{table}
 
-# Bibliografia sem parágrafo
+# Bibliografia sem parágrafo 
+
+<!-- manter o código a seguir para remover o parágrafo na bibliografia -->
 
 \setlength{\parindent}{0pt} 
