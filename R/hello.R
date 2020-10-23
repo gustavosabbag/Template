@@ -1,18 +1,11 @@
-# Hello, world!
-#
-# This is an example function named 'hello' 
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
+# Para criar o pacote (não interessa para quem só vai instalá-lo em seu computador)
 
-hello <- function() {
-  print("Hello, world!")
-}
+## Código para criar as estrutura inst/rmarkdown/templates
+
+library(usethis)
+use_rmarkdown_template()
+
+# Para instalar o template;
+
+if (!requireNamespace("devtools")) install.packages("devtools")
+devtools::install_github("gustavosabbag/template")

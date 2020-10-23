@@ -34,20 +34,29 @@ bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para
 
 ---
 
-# Corpo do documento
+# Template para artigos e projetos no rmarkdown
 
-## Subseção
+## Modifique os parâmetros com seus dados
+
+Este é um documento modelo. Preencha seu nome, nome do trabalho, e inclua o texto. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar o seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
+
+- csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+- Reference_docs (no output de word_document): paper_word_template.docx
+- bibliography: referencias.bib
+
+Para construir sua bibliografia, insira os textos que você irá citar no trabalho no arquivo referencias.bib. Este arquivo será incluído automaticamente na pasta do seu documento do rmarkdown, em formato bibtex (você pode encontrar suas referências neste formato diretamente no google scholar. É só copiar e colar neste arquivo). 
+
+Para citar no seu documento use esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
+
+## Alguns dicas e códigos  úteis
+
+### Códigos úteis de Latex
+
 Aqui vai um texto. Para usar notas de rodapé, faz-se assim^[E escreve-se aqui dentro a nota, em que o próprio documento gera a nota no rodapé e ordena numericamente]. Também se pode colocar *itálico* ou **negrito**. Ou em latex, \textit{itálico} e \textbf{negrito}, ou \textit{\textbf{os dois}}. 
 
-### Terceira Subseção 
-
-Para construir bibliografia, é necessário somente ter um arquivo texto com as referências em formato bibtex, o csl com formato ABNT, e citar usando esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
-
-## Templates de objetos
+### Templates de objetos
 
 O H depois do início do código de objeto (begin), seja tabela ou figura, força o objeto no lugar exato do texto, contanto que se use o pacote float no YML (já está aplicado).
-
-Para criar outros títulos de objeto, criar embaixo do pacote caption, como feito para quadros.
 
 ### Importar figuras
 
@@ -62,8 +71,6 @@ Para criar outros títulos de objeto, criar embaixo do pacote caption, como feit
 \end{figure}
 
 ### Estrutura de Quadros em Latex (laterais fechadas)
-
-Para usar "quadro" em outra língua, criar a caption na linha de baixo do pacote caption, como feito.
 
 
 \setlength{\tabcolsep}{14pt}
@@ -93,7 +100,7 @@ Para usar "quadro" em outra língua, criar a caption na linha de baixo do pacote
 
 
 
-### Mesmo objeto, mas como tabela (laterais abertos)
+### Mesmo objeto, mas como tabela (laterais abertas)
 
 Deve-se alterar na linha de tabular
 
