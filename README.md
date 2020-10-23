@@ -1,6 +1,6 @@
 # Template para artigos
 
-Template de documento RMarkdown para artigos e projetos, no formato ABNT, e com construção bibliográfica automárica.
+Template de documento RMarkdown para artigos e projetos, no formato ABNT, e com construção bibliográfica automática.
 
 Para usá-lo, importe-o no R com o seguinte código:
 
