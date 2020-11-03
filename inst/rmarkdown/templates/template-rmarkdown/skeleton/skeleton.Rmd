@@ -70,6 +70,24 @@ O H depois do início do código de objeto (begin), seja tabela ou figura, forç
 \centerline{\footnotesize Fonte: Elaboração própria.}
 \end{figure}
 
+### Figura com Fonte e outra legenda
+
+Com parâmetro para indentização (espaço para alinhas com a figura - \hspace*{1cm}% - e texto pequeno - \tiny 
+
+\begin{figure}[h]
+\begin{center}
+\captionsetup{justification=centering}
+  \caption{Mapa Conceitual dos Tipos de Estratégia de Mobilização eleitoral}
+  \label{fig:1}
+  \includegraphics[width=15cm]{/Users/gustavosabbag/Google Drive/Doutorados Sanduíche/Doutorado Capes:DAAD Alemanha/Documentos/II - Project/Fig3pt.png}
+\end{center}
+\centerline{\footnotesize Fonte: Elaboração própria, baseado em Stokes(2009).}
+\hspace*{1cm}%
+   \tiny{*Em destaque, construído por mim.}\strut%
+\end{figure}
+
+
+
 ### Estrutura de Quadros em Latex (laterais fechadas)
 
 
