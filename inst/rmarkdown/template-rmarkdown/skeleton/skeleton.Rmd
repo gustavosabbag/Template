@@ -72,7 +72,7 @@ O H depois do início do código de objeto (begin), seja tabela ou figura, forç
 
 ### Figura com Fonte e outra legenda
 
-Com parâmetro para indentização (espaço para alinhas com a figura - \hspace*{1cm}% - e texto pequeno - \tiny 
+Com parâmetro para indentização (espaço para alinhar com a figura - \hspace*{1cm}% - e texto pequeno - \tiny 
 
 \begin{figure}[h]
 \begin{center}
@@ -172,6 +172,19 @@ Deve-se alterar na linha de tabular
 \end{tabular}
 \end{center}
 \centerline{\footnotesize Fonte: Elaboração própria.}
+\end{table}
+
+### Remover linha de uma célula duplicada com cline{x-x}, onde x delimita as colunas que manterão a linha
+
+\begin{table}[H]
+
+\begin{tabular}{ |m{10em}|c|c|c|c| } 
+\hline 
+& \multicolumn{3}{|c|}{\textbf{2021}} & \multicolumn{1}{c|}{\textbf{2022}} \\
+\cline{2-5}
+& \textit{Trimestre 1} & \textit{Trimestre 2} & \textit{Trimestre 3} & \textit{Trimestre 4}  \\
+\hline
+\end{tabular}
 \end{table}
 
 # Bibliografia sem parágrafo 

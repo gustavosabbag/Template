@@ -1,6 +1,6 @@
-# Para criar o pacote (não interessa para quem só vai instalá-lo em seu computador)
+# Para criar o pacote (isso não interessa para quem só vai instalá-lo em seu computador)
 
-## Código para criar as estrutura inst/rmarkdown/templates
+## Código para criar as estruturas inst/rmarkdown/templates
 
 library(usethis)
 use_rmarkdown_template()
