@@ -38,7 +38,7 @@ bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para
 
 ## Modifique os parâmetros com seus dados
 
-Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá produzir. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar o seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
+Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá produzir. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar os seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
 
 - csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
 - Reference_docs (no output de word_document): paper_word_template.docx
@@ -47,6 +47,8 @@ Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá pr
 Para construir sua bibliografia, insira os textos que você irá citar no trabalho no arquivo referencias.bib. Assim, quando você gerar o arquivo, a bibliografia será automaticamente criada no final do documento, no formato ABNT. Este arquivo será incluído automaticamente na pasta do seu documento do rmarkdown, em formato bibtex (você pode encontrar suas referências neste formato diretamente no Google Scholar. É só copiar e colar neste arquivo usando qualquer editor de texto - recomendo BibDesk). 
 
 Para citar as referências no corpo de seu documento, use esta estrutura [@sabbag2017partidos]. Para citar somente o número, colocar - antes, assim [-@sabbag2017partidos]. Ou pode-se também citar diretamente assim @sabbag2017partidos.
+
+O resto desse documento contém dicas de códigos para contrução de tabelas em latex (formato apropriado para exportação pelo rmarkdown)
 
 ## Algumas dicas e códigos  úteis
 
