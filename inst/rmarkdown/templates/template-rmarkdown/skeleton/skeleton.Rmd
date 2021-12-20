@@ -3,7 +3,7 @@ title: "Título"
 subtitle: "Subtítulo" 
 author: "Gustavo Sabbag^[Email: gussabbag@gmail.com; website: gustavosabbag.github.io.]"
 # geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
-date: "DCP-UFMG/ GIGA Institute"
+date: "GIGA Institute/DCP-UFMG"
 thanks: "Trabalho preparado para tal Congresso; ou agradeço a CAPES por me bancar." 
 abstract: |
   \singlespacing Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec arcu sollicitudin, malesuada arcu sit amet, auctor urna. Ut quis massa vitae nisi iaculis commodo. Fusce consequat mauris eget tristique pellentesque. Aliquam ac nisl sit amet metus tempor pellentesque ut accumsan massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia vehicula varius. Praesent congue maximus nibh eget egestas. Suspendisse dapibus non neque sit amet vulputate. Nulla cursus sapien dui, quis blandit tellus auctor placerat. Sed malesuada faucibus nunc, id convallis erat scelerisque tempus. \par 
@@ -15,7 +15,7 @@ output:
     df_print: paged
   word_document:
     fig_caption: yes
-    reference_docx: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//paper_word_template.docx
+    reference_docx: paper_word_template.docx
 header-includes:
    - \usepackage{indentfirst}
    - \setlength{\parindent}{24pt}
@@ -29,8 +29,8 @@ header-includes:
    
 fontsize: 12pt
 mainfont: timesnewroman
-csl: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//associacao-brasileira-de-normas-tecnicas-ipea.csl
-bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para textos (bib, csl, templates)//referencias.bib
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+bibliography: referencias.bib
 
 ---
 
@@ -38,11 +38,7 @@ bibliography: /Users//gustavosabbag//Google Drive//Arquivos de referência para
 
 ## Modifique os parâmetros com seus dados
 
-Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá produzir. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). Além disso, é necessário mudar os seguintes parâmetros no YML (texto antes dos --- acima) para que gere automaticamente as referências de maneira adequada:
-
-- csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
-- Reference_docs (no output de word_document): paper_word_template.docx
-- bibliography: referencias.bib
+Este é um documento modelo. Preencha-o com seus dados e do trabalho que irá produzir. Ele já está padronizado em ABNT. Para adaptá-lo para eventos e atividades específicas, basta preencher os parâmetros anteriores (como fonte, margens, etc). 
 
 Para construir sua bibliografia, insira os textos que você irá citar no trabalho no arquivo referencias.bib. Assim, quando você gerar o arquivo, a bibliografia será automaticamente criada no final do documento, no formato ABNT. Este arquivo será incluído automaticamente na pasta do seu documento do rmarkdown, em formato bibtex (você pode encontrar suas referências neste formato diretamente no Google Scholar. É só copiar e colar neste arquivo usando qualquer editor de texto - recomendo BibDesk). 
 
@@ -189,7 +185,7 @@ Deve-se alterar na linha de tabular
 \end{tabular}
 \end{table}
 
-# Bibliografia sem parágrafo 
+# Bibliografia
 
 <!-- manter o código a seguir para remover o parágrafo na bibliografia -->
 
